@@ -14,28 +14,18 @@ int main() {
             W = 1;
         }
         else {
-            if (S>mS) {
-                W=i;
-                mS = S;
-                mC = C;
-                mL = L;
-            }
+            if (S>mS) W=i;
             else if (S==mS) {
-                if (C<mC) {
-                    W=i;
-                    mS = S;
-                    mC = C;
-                    mL = L;
-                }
+                if (C<mC) W=i;
                 else if (C==mC) {
-                    if (L<mL) {
-                        W=i;
-                        mS = S;
-                        mC = C;
-                        mL = L;
-                    }
+                    if (L<mL) W=i;
                 }
             }
+        }
+        if (W==i) {
+            mS = S;
+            mC = C;
+            mL = L;
         }
     }
     cout << W;
