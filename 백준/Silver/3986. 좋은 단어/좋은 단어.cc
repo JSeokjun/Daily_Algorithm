@@ -10,8 +10,7 @@ int main() {
         stack<char> s;
         cin >> str;
         for(int j=0; j<str.length(); j++) {
-            if(s.empty()) s.push(str[j]);
-            else if(s.top()==str[j]) s.pop();
+            if(!s.empty() && s.top()==str[j]) s.pop();
             else s.push(str[j]);
         }
         if(s.empty()) cnt++;   
