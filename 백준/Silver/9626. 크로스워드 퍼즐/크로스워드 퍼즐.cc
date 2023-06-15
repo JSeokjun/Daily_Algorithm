@@ -7,13 +7,11 @@ int main() {
     row = M+U+D;
     col = N+L+R;
     char arr[row][col];
-    char cw[M][N];
     string str;
  
     for(int i=0; i<row; i++) {
         for(int j=0; j<col; j++) {
-            if(i%2==0 && j%2==0) arr[i][j] = '#';
-            else if(i%2!=0 && j%2!=0) arr[i][j] = '#';
+            if((i%2==0 && j%2==0) || (i%2!=0 && j%2!=0)) arr[i][j] = '#';
             else arr[i][j] = '.';
         }
     }
