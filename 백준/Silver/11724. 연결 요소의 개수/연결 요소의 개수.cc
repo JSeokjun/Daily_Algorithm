@@ -4,13 +4,12 @@ using namespace std;
 
 vector<int> g[1001];
 bool visited[1001] = {false};
-int y;
 
 void dfs(int x) {
     visited[x] = true;
 
     for(int i=0; i<g[x].size(); i++) {
-        y = g[x][i];
+        int y = g[x][i];
         if(!visited[y]) dfs(y);
     }
 }
