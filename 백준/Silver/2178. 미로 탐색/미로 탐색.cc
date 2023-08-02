@@ -20,7 +20,7 @@ int main() {
 
     int x=0, y=0;
     q.push(make_pair(x, y));
-    v[x][y] = 2;
+    v[x][y] = 1;
 
     while(!q.empty()) {
         q.pop();
@@ -47,5 +47,5 @@ int main() {
         
     }
 
-    cout << v[N-1][M-1] - 1;
+    cout << v[N-1][M-1];
 }
