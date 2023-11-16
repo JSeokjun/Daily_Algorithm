@@ -54,8 +54,6 @@ int main() {
         }
 
         cout << time << '\n';
-
-        while(!Q.empty()) Q.pop();
     }
 
     return 0;
