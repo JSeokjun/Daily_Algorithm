@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int mod_add(int a, int b)
-{
+int mod_add(int a, int b) {
     int r = a%10 + b%10;
 
     if(r >= 10) return r - 10;
@@ -10,7 +9,6 @@ int mod_add(int a, int b)
 }
 
 int mod_mul(int a, int b) {
-
     int r = 0;
 
     while(b > 0) {
@@ -23,7 +21,6 @@ int mod_mul(int a, int b) {
 }
 
 int mod_pow(int a, int b) {
-
     int r = 1;
 
     while(b > 0) {
