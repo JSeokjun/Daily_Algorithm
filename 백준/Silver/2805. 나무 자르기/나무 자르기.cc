@@ -19,7 +19,7 @@ int main() {
     while(low < high) {
         long long cnt = 0;
         for(int i=0; i<N; i++) {
-            if(T[i] >= mid) cnt += T[i]-mid;
+            if(T[i] > mid) cnt += T[i]-mid;
         }
 
         if(cnt < M) high = mid - 1;
