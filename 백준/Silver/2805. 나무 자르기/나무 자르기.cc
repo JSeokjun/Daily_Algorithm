@@ -6,15 +6,15 @@ int main() {
     cin.tie(0)->sync_with_stdio(0);
     
     int N, M; cin >> N >> M;
-    vector<long long> T;
-    long long tmp;
+    vector<int> T;
+    int tmp;
 
     for(int i=0; i<N; i++) {
         cin >> tmp;
         T.push_back(tmp);
     }
     
-    long long low = 0, high = 2000000000, mid = (low + high + 1) / 2;
+    int low = 0, high = 2000000000, mid = (low + high + 1) / 2;
 
     while(low < high) {
         long long cnt = 0;
