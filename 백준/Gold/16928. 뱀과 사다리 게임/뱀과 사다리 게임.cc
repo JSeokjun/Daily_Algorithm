@@ -6,15 +6,11 @@ int main() {
     cin.tie(0)->sync_with_stdio(0);
     
     int N, M; cin >> N >> M;
-    int L[101]{0}, S[101]{0};
+    int L[101]{0};
 
-    for(int i=0; i<N; i++) {
+    for(int i=0; i<N+M; i++) {
         int x, y; cin >> x >> y;
         L[x] = y;
-    }
-    for(int i=0; i<M; i++) {
-        int u, v; cin >> u >> v;
-        S[u] = v;
     }
 
     queue<pair<int,int>> Q;
@@ -31,7 +27,6 @@ int main() {
         for(int i=1; i<=6; i++) {
             if(!visit[num+i] && num+i < 100) {
                 if(L[num+i] != 0) Q.push({L[num+i],cnt+1});
-                else if(S[num+i] != 0) Q.push({S[num+i],cnt+1});
                 else Q.push({num+i,cnt+1});
                 visit[num+i] = 1;
             }
