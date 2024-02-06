@@ -6,7 +6,7 @@ int main() {
     cin.tie(0)->sync_with_stdio(0);
     
     int N, M, K; cin >> N >> M >> K;
-    int tmp_M = M;
+    int tmp_M = M, tmp_K = K;
     int board[N][N];
     queue<pair<int,int>> Q;
 
@@ -26,13 +26,21 @@ int main() {
             if(!board[i][j]) {
                 Q.push({i, j});
                 board[i][j] = 1;
+                if(K != 1) {
+                    M--;
+                    tmp_K = K;
+                }
 
                 while(!Q.empty()) {
                     int x = Q.front().first;
                     int y = Q.front().second;
 
                     Q.pop();
-                    M--;
+                    if(K == 1) M--;
+                    else if(!tmp_K--) {
+                        M--;
+                        tmp_K = K;
+                    }
                     if(!M) break;
  
                     if(x > 0 && !board[x-1][y]) {
