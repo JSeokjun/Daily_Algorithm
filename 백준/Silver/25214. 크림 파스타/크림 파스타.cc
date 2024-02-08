@@ -12,11 +12,8 @@ int main() {
     while(N--) {
         int a; cin >> a;
 
-        if(a-min > max) {
-            max = a-min;
-            V.push_back(max);
-        }
-        else V.push_back(max);
+        if(a-min > max) max = a-min;
+        V.push_back(max);
 
         if(a < min) min = a;
     }
