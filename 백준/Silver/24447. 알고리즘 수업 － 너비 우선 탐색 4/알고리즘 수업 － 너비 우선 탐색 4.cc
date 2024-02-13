@@ -8,7 +8,7 @@ int main() {
     
     int N, M, R; cin >> N >> M >> R;
     vector<int> G[N+1];
-    queue<pair<int,long long>> Q;
+    queue<pair<int,int>> Q;
     int visit[N+1]{0};
     long long result = 0, t = 0;
 
@@ -23,7 +23,7 @@ int main() {
 
     while(!Q.empty()) {
         int n = Q.front().first;
-        long long d = Q.front().second;
+        int d = Q.front().second;
 
         t++;
         result += d*t;
