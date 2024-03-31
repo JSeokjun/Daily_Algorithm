@@ -37,10 +37,6 @@ int main() {
         for(int i=0; i<V[node].size(); i++) {
             int n = V[node][i];
             indegree[n]--;
-            if(indegree[n] < 0) {
-                cout << 0;
-                return 0;
-            }
             if(!indegree[n]) Q.push(n);
         }
     }
