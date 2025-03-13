@@ -18,7 +18,7 @@ for i in range(N):
 rank = 1
 equal_cnt = 0
 
-for i in range(N-1):
+for i in range(N):
     if L[i][0] == K:
         print(rank)
         break
