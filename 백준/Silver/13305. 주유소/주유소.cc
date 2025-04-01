@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
   int N; cin >> N;
-  vector<pair<int,int>> V;
+  vector<pair<long,long>> V;
 
   for (int i=0; i<N-1; i++) {
     int distance; cin >> distance;
@@ -18,7 +18,8 @@ int main() {
     V[i].first = price;
   }
 
-  int index = 0, cost = 0;
+  int index = 0;
+  long long cost = 0;
 
   while(1) {
     bool is_break = false; 
