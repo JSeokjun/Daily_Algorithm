@@ -18,7 +18,7 @@ int main() {
 
     if (word.length() >= M) {
       if (map.find(word) != map.end()) {
-        map[word] += 1;
+        map[word]++; // 더 간결한 방식으로 빈도수 증가
       }
       else {
         map.insert({word, 1});
@@ -40,7 +40,7 @@ int main() {
     return a.first < b.first;
   });
 
-  for (int i = 0; i < map.size(); i++) {
+  for (int i = 0; i < V.size(); i++) { // map.size() 대신 V.size() 사용
     cout << V[i].first << '\n';
   }
  
