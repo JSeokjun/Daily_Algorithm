@@ -25,20 +25,26 @@ int main() {
     num_zero /= 2;
     num_one /= 2;
 
-    for (int i=V.size()-1; i>=0; i--) {
+    int i = V.size()-1;
+
+    while(num_zero) {
         if (V[i] == 0) {
             V.erase(V.begin()+i);
             num_zero--;
+
+            if (i >= V.size()) i--;
         }
-        if (num_zero == 0) break;
+        else i--;
     }
 
-    for (int i=0; i<V.size(); i++) {
+    i = 0;
+
+    while (num_one) {
         if (V[i] == 1) {
             V.erase(V.begin()+i);
             num_one--;
         }
-        if (num_one == 0) break;
+        else i++;
     }
 
     for (int i=0; i<V.size(); i++) {
